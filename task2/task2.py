@@ -1,5 +1,7 @@
-cycle_path = input("Cycle coordinates file path: ")
-points_path = input("Points coordinates file path: ")
+import sys
+args = sys.argv
+cycle_path = args[1]
+points_path = args[2]
 
 def distance(x1, y1, x2, y2):
     return ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5

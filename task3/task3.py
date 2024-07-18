@@ -1,4 +1,5 @@
 import json
+import sys
 
 def fill_value_graph(
         tests: list[dict],
@@ -13,9 +14,10 @@ def fill_value_graph(
             fill_value_graph(_values, values)
 
 
-values_path = input("Values file: ")
-tests_path = input("Tests file: ")
-report_path = input("Report file: ")
+args = sys.argv
+values_path = args[1]
+tests_path = args[2]
+report_path = args[3]
 
 with open(values_path, 'r') as values_file:
     values = json.load(values_file).get("values")

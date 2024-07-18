@@ -1,5 +1,6 @@
-filepath = input(">> ")
+import sys
 
+filepath = sys.argv[1]
 with open(filepath, 'r') as f_obj:
     nums = [int(num.strip()) for num in f_obj.readlines()]
 

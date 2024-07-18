@@ -1,3 +1,5 @@
+import sys
+
 class Num(object):
     def __init__(self, max_value, val=1):
         self.val = val
@@ -32,5 +34,5 @@ def path_cycle_list(n: int, m: int):
     return path
 
 
-n, m = input(">>").split()
+n, m = sys.argv[1:3]
 print(path_cycle_list(n=int(n), m=int(m)))
